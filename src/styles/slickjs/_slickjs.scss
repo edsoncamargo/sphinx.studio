@@ -1,0 +1,15 @@
+.slick-dots {
+  li {
+    &.slick-active {
+      button:before {
+        color: var(--sph-color-primary) !important;
+        font-size: 8px;
+      }
+    }
+
+    button:before {
+      color: var(--sph-color-neutral-06) !important;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}

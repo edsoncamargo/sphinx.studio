@@ -1,0 +1,46 @@
+<section class="sph-container sph-artists">
+  <div class="sph-title" data-aos="fade-right">
+    <h2>Artistas</h2>
+  </div>
+
+  <div *ngFor="let card of cards" class="sph-artists__cards">
+    <div
+      class="sph-artists__cards__item"
+      [ngStyle]="{
+        'background-image':
+          'url(../../../../assets/artists/' +
+          card.cover.name +
+          coverSize +
+          card.cover.ext +
+          ')'
+      }"
+    >
+      <div class="sph-artists__cards__item__bio">
+        <h1>{{ card.name }}</h1>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+
+    <div class="sph-artists__cards__item sph-artists__cards__item--sm">
+      <em
+        [ngStyle]="{
+          'background-image':
+            'url(../../../../assets/artists/' +
+            card.cover.name +
+            coverSize +
+            card.cover.ext +
+            ')'
+        }"
+      ></em>
+
+      <div class="sph-artists__cards__item__bio">
+        <h1>{{ card.name }}</h1>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sph-home__graphics-triangle-red sph-graphics sph-graphics--end">
+    <em class="sph-graphics__triangle-red float"></em>
+  </div>
+</section>

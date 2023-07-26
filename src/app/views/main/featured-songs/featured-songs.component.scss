@@ -1,0 +1,28 @@
+.sph-featured-songs {
+  width: 100%;
+  position: relative;
+
+  &__cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sph-spacing-md);
+    position: relative;
+    z-index: 1;
+
+    .sph-featured-songs__card {
+      flex-grow: 1;
+    }
+  }
+
+  .sph-home__graphics-circle-white-thick {
+    top: 800px;
+    right: -200px;
+  }
+
+  .sph-home__graphics-triangle-red {
+    top: 50%;
+    left: -200px;
+    transform: rotate(252deg);
+  }
+}

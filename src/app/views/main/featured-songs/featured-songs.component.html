@@ -1,0 +1,33 @@
+<section class="sph-container sph-featured-songs">
+  <div class="sph-title" data-aos="fade-right">
+    <h2>Lançamentos</h2>
+  </div>
+
+  <div class="sph-featured-songs__cards">
+    <div *ngFor="let card of cards" class="sph-featured-songs__card">
+      <sph-song-card [card]="card" />
+    </div>
+  </div>
+
+  <div
+    class="sph-home__graphics-triangle-red sph-graphics sph-graphics--left sph-graphics--auto"
+  >
+    <em class="sph-graphics__triangle-red float"></em>
+  </div>
+
+  <div
+    class="sph-home__graphics-circle-red-thick sph-graphics sph-graphics--end sph-graphics--center-y"
+  >
+    <em
+      class="sph-graphics__circle-red sph-graphics__circle-red--thick float"
+    ></em>
+  </div>
+
+  <div
+    class="sph-home__graphics-circle-white-thick sph-graphics sph-graphics--end sph-graphics--center-y"
+  >
+    <em
+      class="sph-graphics__circle-white sph-graphics__circle-white--thin float"
+    ></em>
+  </div>
+</section>

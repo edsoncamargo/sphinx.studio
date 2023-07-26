@@ -1,0 +1,355 @@
+.sph-song-card {
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    129deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(12, 12, 12, 1) 51%,
+    rgba(33, 33, 33, 1) 89%,
+    rgba(49, 49, 49, 1) 100%
+  );
+  border-radius: 60px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  @media (hover: none) or (max-width: 768px) {
+    border-radius: 16px;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.4);
+
+    .sph-song-card__topo {
+      .sph-song-card__topo__square {
+        &--red,
+        &--white,
+        &--yellow,
+        &--border-white {
+          transform: rotate(65deg);
+        }
+      }
+    }
+
+    .sph-song-card__body {
+      .sph-song-card__informations {
+        .sph-song-card__music {
+          .sph-song-card__liked {
+            transform: scale(1.2);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .sph-song-card__topo {
+    position: relative;
+    top: -6px;
+    left: -40px;
+
+    .sph-song-card__topo__square {
+      display: block;
+      height: 75px;
+      width: 75px;
+      position: absolute;
+      transition: all 0.6s ease-in-out;
+
+      &--red {
+        top: -8px;
+        left: 24px;
+        transform: rotate(-65deg);
+        background-color: var(--sph-color-secondary);
+        z-index: 1;
+      }
+
+      &--white {
+        top: -8px;
+        left: 24px;
+        transform: rotate(-65deg);
+        background-color: var(--sph-color-neutral-10);
+        z-index: 1;
+      }
+
+      &--yellow {
+        top: -8px;
+        left: 24px;
+        transform: rotate(-65deg);
+        background-color: var(--sph-color-primary);
+        z-index: 1;
+      }
+
+      &--border-white {
+        top: 4px;
+        left: -4px;
+        transform: rotate(-65deg);
+        border: 9px solid var(--sph-color-neutral-10);
+      }
+    }
+  }
+
+  .sph-song-card__cover {
+    width: 100%;
+    height: 264px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+
+    @media (hover: none) or (max-width: 768px) {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+  }
+
+  .sph-song-card__body {
+    display: flex;
+    flex-direction: column;
+    padding: var(--sph-spacing-lg);
+
+    @media (hover: none) or (max-width: 768px) {
+      padding-bottom: var(--sph-spacing-xxl);
+    }
+
+    .sph-song-card__informations {
+      .sph-song-card__music {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--sph-spacing-md);
+
+        .sph-song-card__name {
+          h1 {
+            font-size: 32px;
+            font-weight: 600;
+          }
+
+          span {
+            font-size: 20px;
+            font-weight: 200;
+          }
+        }
+
+        .sph-song-card__liked {
+          height: 23.09px;
+          width: 27px;
+          max-height: 23.09px;
+          max-width: 27px;
+          min-height: 23.09px;
+          min-width: 27px;
+
+          background-size: contain;
+          background-image: url(../../../assets/icons/heart-solid.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          transform: scale(1);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      .sph-song-card__player {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--sph-spacing-xs);
+
+        &__timer {
+          display: flex;
+          justify-content: space-between;
+          font-family: "Righteous", cursive;
+          opacity: 0.5;
+        }
+
+        &__bar {
+          width: 100%;
+          height: 12px;
+          position: relative;
+          background-color: var(--sph-color-neutral-03);
+          border-radius: 52px;
+
+          &:before {
+            content: "";
+            display: block;
+            width: 75%;
+            height: 12px;
+            background: linear-gradient(
+              130deg,
+              rgba(91, 188, 172, 1) 0%,
+              rgba(115, 0, 119, 1) 20%,
+              rgba(156, 19, 30, 1) 50%,
+              rgba(0, 255, 162, 1) 70%,
+              rgba(255, 255, 255, 1) 100%
+            );
+            background-size: 120% 400%;
+            border-radius: 52px;
+            animation: OpacityAnim 6s ease-in-out infinite alternate;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            background-color: #5bbcac;
+            border-radius: 999px;
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+          }
+        }
+      }
+
+      .sph-song-card__listen {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        margin-top: var(--sph-spacing-md);
+
+        .sph-song-card__listen__button {
+          position: relative;
+
+          button {
+            min-height: 38px;
+            min-width: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--sph-color-neutral-02);
+            border-radius: 999px;
+            border: none;
+            position: relative;
+            left: -2px;
+            z-index: 1;
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 12.32px;
+              height: 14.38px;
+
+              background-size: contain;
+              background-image: url(../../../assets/icons/play-solid.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+
+          em {
+            &:nth-child(2) {
+              width: 38px;
+              height: 38px;
+              position: absolute;
+              top: -2px;
+              left: -2px;
+              background-color: #19ffab;
+              border-radius: 999px;
+              filter: blur(4px);
+              animation: Pulse 3s ease-in-out infinite alternate;
+            }
+
+            &:nth-child(3) {
+              width: 38px;
+              height: 38px;
+              position: absolute;
+              bottom: -2px;
+              left: -2px;
+              background-color: #961029;
+              border-radius: 999px;
+              filter: blur(4px);
+              animation: Pulse 3s ease-in-out infinite alternate;
+            }
+
+            &:nth-child(4) {
+              width: 38px;
+              height: 38px;
+              position: absolute;
+              bottom: -2px;
+              right: -2px;
+              background-color: #810658;
+              border-radius: 999px;
+              filter: blur(4px);
+              animation: Pulse 3s ease-in-out infinite alternate;
+            }
+          }
+        }
+
+        p {
+          font-size: 24px;
+
+          em {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .sph-song-card__letter {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      padding: var(--sph-spacing-md) var(--sph-spacing-sm);
+      gap: var(--sph-spacing-xs);
+      text-align: center;
+      margin-top: 48px;
+      margin-bottom: 32px;
+
+      @media (hover: none) or (max-width: 768px) {
+        margin-bottom: 0px;
+      }
+
+      p {
+        &:first-child {
+          opacity: 0.32;
+        }
+
+        &:last-child {
+          opacity: 0.32;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: var(--sph-color-neutral-05);
+        border-radius: 20px;
+        border: 2px solid var(--sph-color-neutral-08);
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@keyframes OpacityAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Pulse {
+  0% {
+    filter: blur(4px);
+  }
+  100% {
+    filter: blur(10px);
+  }
+}

@@ -1,0 +1,89 @@
+<div class="sph-studios sph-container">
+  <div class="sph-title" data-aos="fade-right">
+    <h2>Estúdios</h2>
+  </div>
+
+  <div class="sph-studios__item">
+    <h2>ESTÚDIO DE <span>AÚDIO</span></h2>
+
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <em
+          [ngStyle]="{
+            'background-image':
+              'url(../../../assets/featured-songs/' + slide.img + ')'
+          }"
+        ></em>
+      </div>
+    </ngx-slick-carousel>
+  </div>
+
+  <div class="sph-studios__item">
+    <h2>ESTÚDIO DE <span>VÍDEO</span></h2>
+
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <em
+          [ngStyle]="{
+            'background-image':
+              'url(../../../assets/featured-songs/' + slide.img + ')'
+          }"
+        ></em>
+      </div>
+    </ngx-slick-carousel>
+  </div>
+
+  <div
+    class="sph-home__graphics-triangle-red sph-graphics sph-graphics--left sph-graphics--auto"
+  >
+    <em class="sph-graphics__triangle-red float"></em>
+  </div>
+
+  <div
+    class="sph-home__graphics-circle-red-thick sph-graphics sph-graphics--end sph-graphics--center-y"
+  >
+    <em
+      class="sph-graphics__circle-red sph-graphics__circle-red--thick float"
+    ></em>
+  </div>
+
+  <div
+    class="sph-home__graphics-circle-white-thin sph-graphics sph-graphics--end sph-graphics--center-y"
+  >
+    <em
+      class="sph-graphics__circle-white sph-graphics__circle-white--thin float"
+    ></em>
+  </div>
+
+  <div
+    class="sph-home__graphics-square-yellow sph-graphics sph-graphics--start sph-graphics--center-start float"
+  >
+    <em
+      class="sph-graphics__square-yellow--big sph-graphics__square-yellow spin"
+    ></em>
+  </div>
+
+  <div
+    class="sph-home__graphics-square-white-border sph-graphics sph-graphics--start sph-graphics--center-start float"
+  >
+    <em
+      class="sph-graphics__square-white-border--big sph-graphics__square-white-border spin"
+    ></em>
+  </div>
+
+  <div
+    class="sph-graphics sph-graphics--end sph-graphics--right sph-graphics--bottom"
+  >
+    <em class="sph-graphics__line-white sph-graphics--right"></em>
+    <em class="sph-graphics__line-red sph-graphics--right"></em>
+    <em class="sph-graphics__line-yellow sph-graphics--right"></em>
+  </div>
+</div>

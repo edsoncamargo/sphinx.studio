@@ -1,0 +1,214 @@
+.sph-graphics {
+  width: 100%;
+  position: absolute;
+  display: flex;
+
+  &--auto {
+    width: auto;
+  }
+
+  &--end {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--sph-spacing-md);
+  }
+
+  &--center-y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--center-x {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--top {
+    top: 0px;
+  }
+
+  &--left {
+    left: 0px;
+  }
+
+  &--right {
+    right: 0px;
+  }
+
+  &--bottom {
+    bottom: 0px;
+  }
+
+  &--x-half-l {
+    transform: translateX(-50%);
+  }
+
+  &__line-white {
+    display: block;
+    width: 100%;
+    max-width: 508px;
+    height: 12px;
+    background-color: var(--sph-color-neutral-10);
+    animation: slideTo 4s forwards, shake 4s alternate infinite 4s;
+    animation-timing-function: ease-in-out;
+  }
+
+  &__line-red {
+    display: block;
+    width: 100%;
+    max-width: 1086px;
+    height: 12px;
+    background-color: var(--sph-color-primary);
+    animation: slideTo 4s forwards, shake 4s alternate infinite 4.5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  &__line-yellow {
+    display: block;
+    width: 100%;
+    max-width: 821px;
+    height: 12px;
+    background-color: var(--sph-color-secondary);
+    animation: slideTo 4s forwards, shake 4s alternate infinite 5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  &__circle-white {
+    border-radius: 999px;
+
+    &--thick {
+      width: 132px;
+      height: 132px;
+      border: 18px solid var(--sph-color-neutral-10);
+    }
+
+    &--thin {
+      width: 115px;
+      height: 115px;
+      border: 8px solid var(--sph-color-neutral-10);
+    }
+
+    &--big {
+      width: 590px;
+      height: 590px;
+      border: 18px solid var(--sph-color-neutral-10);
+    }
+  }
+
+  &__circle-red {
+    border-radius: 999px;
+
+    &--thick {
+      width: 132px;
+      height: 132px;
+      border: 18px solid var(--sph-color-secondary);
+    }
+
+    &--thin {
+      width: 260px;
+      height: 260px;
+      border: 8px solid var(--sph-color-secondary);
+    }
+
+    &--big {
+      width: 518px;
+      height: 518px;
+      border: 8px solid var(--sph-color-secondary);
+    }
+  }
+
+  &__square-red {
+    width: 75px;
+    height: 75px;
+    background-color: var(--sph-color-secondary);
+
+    &--big {
+      width: 218.05px;
+      height: 218.05px;
+    }
+  }
+
+  &__square-yellow {
+    width: 75px;
+    height: 75px;
+    background-color: var(--sph-color-primary);
+
+    &--big {
+      width: 218.05px;
+      height: 218.05px;
+    }
+  }
+
+  &__square-white-border {
+    width: 75px;
+    height: 75px;
+    border: 9px solid var(--sph-color-neutral-10);
+
+    &--big {
+      width: 218.05px;
+      height: 218.05px;
+    }
+  }
+
+  &__triangle-red {
+    background-image: linear-gradient(rgba(#7e003b, 0), rgba(#ff0000, 0.5));
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    width: 342px;
+    height: 296px;
+  }
+}
+
+@keyframes slideTo {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(50px);
+  }
+}
+
+.float {
+  animation-name: floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.spin {
+  animation-name: spinning;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

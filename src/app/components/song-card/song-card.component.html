@@ -1,0 +1,61 @@
+<div class="sph-song-card" (click)="redirectTo()">
+  <div class="sph-song-card__topo">
+    <em
+      class="sph-song-card__topo__square sph-song-card__topo__square--{{
+        card.flag
+      }}"
+    ></em>
+    <em
+      class="sph-song-card__topo__square sph-song-card__topo__square--border-white"
+    ></em>
+  </div>
+
+  <div
+    class="sph-song-card__cover"
+    [ngStyle]="{
+      'background-image':
+        'url(../../../assets/featured-songs/' + card.cover + ')'
+    }"
+  ></div>
+
+  <div class="sph-song-card__body">
+    <div class="sph-song-card__informations">
+      <div class="sph-song-card__music">
+        <div class="sph-song-card__name">
+          <h1>{{ card.song }}</h1>
+          <span>{{ card.name }}</span>
+        </div>
+
+        <div class="sph-song-card__liked">
+          <em></em>
+        </div>
+      </div>
+
+      <div class="sph-song-card__player">
+        <div class="sph-song-card__player__timer">
+          <small>0:00</small>
+          <small>{{ card.timer }}</small>
+        </div>
+
+        <div class="sph-song-card__player__bar"></div>
+      </div>
+
+      <div class="sph-song-card__listen">
+        <div class="sph-song-card__listen__button">
+          <button></button>
+          <em></em>
+          <em></em>
+          <em></em>
+        </div>
+
+        <p><em>Ouça</em> agora</p>
+      </div>
+    </div>
+
+    <div class="sph-song-card__letter">
+      <p>{{ card.letters[0] }}</p>
+      <p>{{ card.letters[1] }}</p>
+      <p>{{ card.letters[2] }}</p>
+    </div>
+  </div>
+</div>

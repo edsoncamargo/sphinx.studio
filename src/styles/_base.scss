@@ -1,0 +1,30 @@
+body {
+  font-family: "Raleway", sans-serif;
+
+  background-color: var(--sph-color-neutral-00);
+  color: var(--sph-color-neutral-10);
+
+  .sph-container {
+    max-width: 1640px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: var(--sph-spacing-md);
+    padding-top: var(--sph-spacing-xxl);
+  }
+
+  .logo {
+    max-width: 196px;
+    min-width: 196px;
+    min-height: 196px;
+    background-size: contain;
+    background-image: url(../assets/svg/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width: 768px) {
+      max-width: 130px;
+      min-width: 130px;
+      min-height: 130px;
+    }
+  }
+}
