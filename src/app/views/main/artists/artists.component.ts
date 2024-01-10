@@ -16,22 +16,6 @@ export class ArtistsComponent implements OnInit {
         ext: ".jpg"
       }
     },
-    {
-      name: "MC Neguin ZS",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin neque quis augue tempor bibendum. Ut turpis lacus, rutrum quis magna ut, vulputate mollis nibh. Praesent quis accumsan tortor. Aenean non pharetra magna. In ultricies risus vel ex tincidunt, ac fringilla urna iaculis. Proin lorem quam, blandit nec metus nec, pharetra blandit arcu. In nec sem a urna finibus pretium. Praesent dictum mauris nec consectetur bibendum. Sed tincidunt sem ut ipsum cursus, quis tincidunt ante feugiat.",
-      cover: {
-        name: "MCNeguinZS",
-        ext: ".jpg"
-      }
-    },
-    {
-      name: "Ryssa",
-      description: "Larissa Rafaela Ferreira Figueiredo (São paulo 28 de agosto de 2004) conhecida também como Ryssa, (Seu nome artístico foi dado por um amigo muito proximo), uma cantora e compositora. Nascida e criada na zona sul de São paulo (Jd.icarai). No ano de 2013 entrou para o mundo da musica tendo a sua primeira composição inspirada em alguns mc's da época. Ryssa ainda criança observava as letras e o estilo de vida que todos aqueles artistas e se interessou por seu estilo de vida. no ano de 2015 a 2016 Ryssa começou a participar de batalhas de rima na escola oque aumento ainda mais seu gosto pela arte. No início do ano de 2023 a cantora entrou para a gravadora Sphinx Studio a qual pertence até hoje.",
-      cover: {
-        name: "Ryssa",
-        ext: ".jpg"
-      }
-    },
   ];
 
   coverSize: "" | "-sm" = "";
