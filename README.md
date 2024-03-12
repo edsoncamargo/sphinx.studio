@@ -30,20 +30,20 @@ Essa sessão tem um carrossel com imagens e breves descrições dos estúdios de
 1. Clone the repository:
 
    ```bash
-       git clone https://github.com/edsoncamargo/sphinx.studio
-       cd your-path/sphinx.studio
+    git clone https://github.com/edsoncamargo/sphinx.studio
+    cd your-path/sphinx.studio
    ```
 
 2. Install the dependencies:
 
    ```bash
-       npm install
+    npm install
    ```
 
 3. Start the development server:
 
    ```bash
-       ng serve -o
+    ng serve -o
    ```
 
 - Install Live Server in VSCode extensions with `@recommended` and launch `index.html` 🚀
