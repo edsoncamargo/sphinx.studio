@@ -1,6 +1,6 @@
 # Sphinx.Studio
 
-![Portfolio](./assets/images/thumb.png)
+![Portfolio](./src/assets/thumb.png)
 
 **Sphinx Studio** é uma empresa de gestão, studio, gravadora, editora musical e entretenimento fundado por P. Muniz.
 
