@@ -4,12 +4,12 @@
 
 **Sphinx Studio** é uma empresa de gestão, studio, gravadora, editora musical e entretenimento fundado por P. Muniz.
 
-## Technology
+## Tecnologia
 
-The following are the key technologies and tools used in the development of this app:
+A seguir estão as principais tecnologias e ferramentas usadas no desenvolvimento deste aplicativo:
 
-- **Angular/SCSS**: Core technologies for creating a dynamic and responsive user interface.
-- **Flexbox**: Utilized to create flexible and responsive layouts.
+- **Angular/SCSS**: Tecnologias básicas para criar uma interface de usuário dinâmica e responsiva.
+- **Flexbox**: Utilizado para criar layouts flexíveis e responsivos.
 
 ## Lançamentos
 
